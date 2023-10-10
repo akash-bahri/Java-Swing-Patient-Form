@@ -4,6 +4,7 @@
  */
 package ui;
 
+import Model.Patient;
 import java.awt.CardLayout;
 
 /**
@@ -59,18 +60,18 @@ public class MainFrame extends javax.swing.JFrame {
             TopPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(TopPanelLayout.createSequentialGroup()
                 .addGap(74, 74, 74)
-                .addComponent(FormButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 623, Short.MAX_VALUE)
-                .addComponent(ViewButton)
+                .addComponent(FormButton, javax.swing.GroupLayout.PREFERRED_SIZE, 341, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 95, Short.MAX_VALUE)
+                .addComponent(ViewButton, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(98, 98, 98))
         );
         TopPanelLayout.setVerticalGroup(
             TopPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(TopPanelLayout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addGroup(TopPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(FormButton)
-                    .addComponent(ViewButton))
+                .addContainerGap()
+                .addGroup(TopPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(ViewButton, javax.swing.GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE)
+                    .addComponent(FormButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -102,13 +103,17 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void ViewButtonActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        
+        Patient p = new Patient();
+        ViewPanel viewPanel = new ViewPanel(p);
+        BotPanel.add(viewPanel);
+        CardLayout layout = (CardLayout) BotPanel.getLayout();
+        layout.next(BotPanel);
     }// GEN-LAST:event_jButton2ActionPerformed
     
 
     private void FormButtonActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        FormPanel formPanel = new FormPanel();
+        FormPanel formPanel = new FormPanel(BotPanel);
         // SplitPane.setBottomComponent(formPanel);
         BotPanel.add(formPanel);
         CardLayout layout = (CardLayout) BotPanel.getLayout();
