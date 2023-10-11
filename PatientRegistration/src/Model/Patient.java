@@ -65,7 +65,7 @@ public class Patient {
     }
 
     public void setEmail(String Email) throws Exception {
-        if (Email.matches("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]$"))
+        if (Email.matches("^[a-zA-Z0-9+_.-]+@+[a-zA-Z0-9.-]+.+[a-zA-Z]"))
             this.Email = Email;
         else
             throw new Exception("Email is not valid");

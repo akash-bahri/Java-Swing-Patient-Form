@@ -25,6 +25,7 @@ import javax.swing.filechooser.FileNameExtensionFilter;
  */
 public class FormPanel extends javax.swing.JPanel {
 
+    private Patient newPatient;
     /**
      * Creates new form newpanel
      */
@@ -287,7 +288,7 @@ public class FormPanel extends javax.swing.JPanel {
 
     private void SubmitButtonActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_SubmitButtonActionPerformed
         // TODO add your handling code here:
-        Patient newPatient = new Patient();
+        newPatient = new Patient();
 
         try {
             newPatient.setFName(FNameText.getText());
@@ -309,6 +310,7 @@ public class FormPanel extends javax.swing.JPanel {
 
             JOptionPane.showMessageDialog(this, "Submitted", "User Information", JOptionPane.INFORMATION_MESSAGE);
             ViewPanel newView = new ViewPanel(newPatient);
+            
        
         // SplitPane.setBottomComponent(formPanel);
         BotPanel.add(newView);
@@ -352,6 +354,10 @@ public class FormPanel extends javax.swing.JPanel {
         
 
     }// GEN-LAST:event_ImageButtonActionPerformed
+
+    public Patient getPatient(){
+        return this.newPatient;
+    }
 
     private void EmailTextActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_EmailTextActionPerformed
         // TODO add your handling code here:
