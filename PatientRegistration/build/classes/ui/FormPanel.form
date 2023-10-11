@@ -25,59 +25,62 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace max="32767" attributes="0"/>
-              <Component id="TitleLabel" min="-2" pref="356" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="274" max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="112" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="SubmitButton" max="32767" attributes="0"/>
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="AgeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="EmailLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="FNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="LNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="MessageLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="112" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="SubmitButton" max="32767" attributes="0"/>
                           <Group type="102" attributes="0">
-                              <Component id="MaleButton" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
-                              <Component id="FemaleButton" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="OtherButton" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="AgeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="EmailLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="FNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="LNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="MessageLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="MaleButton" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="FemaleButton" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
+                                      <Component id="OtherButton" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="FNameText" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="LNameText" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="AgeText" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="EmailText" alignment="0" pref="319" max="32767" attributes="0"/>
+                                  <Component id="PatientType" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="MessageText" max="32767" attributes="0"/>
+                              </Group>
                           </Group>
-                          <Component id="FNameText" alignment="0" max="32767" attributes="0"/>
-                          <Component id="LNameText" alignment="0" max="32767" attributes="0"/>
-                          <Component id="AgeText" alignment="0" max="32767" attributes="0"/>
-                          <Component id="EmailText" alignment="0" pref="319" max="32767" attributes="0"/>
-                          <Component id="PatientType" alignment="1" max="32767" attributes="0"/>
-                          <Component id="MessageText" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="ImageLabel" max="32767" attributes="0"/>
+                          <Component id="UploadLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="ImageButton" alignment="0" pref="183" max="32767" attributes="0"/>
                       </Group>
                   </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="225" max="-2" attributes="0"/>
+                      <Component id="TitleLabel" min="-2" pref="454" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="ImageLabel" max="32767" attributes="0"/>
-                  <Component id="UploadLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="ImageButton" alignment="0" pref="183" max="32767" attributes="0"/>
-              </Group>
-              <EmptySpace pref="104" max="32767" attributes="0"/>
+              <EmptySpace pref="63" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
-              <Component id="TitleLabel" min="-2" pref="34" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+              <Component id="TitleLabel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -130,7 +133,7 @@
               </Group>
               <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
               <Component id="SubmitButton" min="-2" pref="34" max="-2" attributes="0"/>
-              <EmptySpace pref="83" max="32767" attributes="0"/>
+              <EmptySpace pref="71" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -139,9 +142,9 @@
     <Component class="javax.swing.JLabel" name="FNameLabel">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="14" style="0"/>
+          <Font name="Segoe UI" size="18" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="First Name"/>
+        <Property name="text" type="java.lang.String" value="First Name :"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="FNameText">
@@ -153,7 +156,7 @@
     <Component class="javax.swing.JLabel" name="UploadLabel">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="14" style="0"/>
+          <Font name="Segoe UI" size="14" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Upload Image"/>
       </Properties>
@@ -172,17 +175,17 @@
     <Component class="javax.swing.JLabel" name="AgeLabel">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="14" style="0"/>
+          <Font name="Segoe UI" size="18" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Age"/>
+        <Property name="text" type="java.lang.String" value="Age :"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="LNameLabel">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="14" style="0"/>
+          <Font name="Segoe UI" size="18" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Last Name"/>
+        <Property name="text" type="java.lang.String" value="Last Name :"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="ImageButton">
@@ -211,17 +214,17 @@
     <Component class="javax.swing.JLabel" name="EmailLabel">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="14" style="0"/>
+          <Font name="Segoe UI" size="18" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Email"/>
+        <Property name="text" type="java.lang.String" value="Email :"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="MessageLabel">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="14" style="0"/>
+          <Font name="Segoe UI" size="18" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Message"/>
+        <Property name="text" type="java.lang.String" value="Message :"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="ImageLabel">
@@ -236,7 +239,7 @@
     <Component class="javax.swing.JLabel" name="TitleLabel">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Franklin Gothic Medium" size="24" style="1"/>
+          <Font name="Franklin Gothic Medium" size="36" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="text" type="java.lang.String" value="Patient Registration Form "/>
@@ -245,9 +248,9 @@
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="14" style="0"/>
+          <Font name="Segoe UI" size="18" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Patient Type"/>
+        <Property name="text" type="java.lang.String" value="Patient Type :"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JComboBox" name="PatientType">
@@ -274,9 +277,9 @@
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="14" style="0"/>
+          <Font name="Segoe UI" size="18" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Gender"/>
+        <Property name="text" type="java.lang.String" value="Gender :"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JRadioButton" name="OtherButton">
@@ -284,8 +287,11 @@
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
           <ComponentRef name="GenderGroup"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Other"/>
-        <Property name="actionCommand" type="java.lang.String" value="Patient is Other"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="OTHER"/>
+        <Property name="actionCommand" type="java.lang.String" value="OTHER"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OtherButtonActionPerformed"/>
@@ -296,8 +302,11 @@
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
           <ComponentRef name="GenderGroup"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Male"/>
-        <Property name="actionCommand" type="java.lang.String" value="Patient is Male"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="MALE"/>
+        <Property name="actionCommand" type="java.lang.String" value="MALE"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MaleButtonActionPerformed"/>
@@ -308,8 +317,11 @@
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
           <ComponentRef name="GenderGroup"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Female"/>
-        <Property name="actionCommand" type="java.lang.String" value="Patient is Female"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="FEMALE"/>
+        <Property name="actionCommand" type="java.lang.String" value="FEMALE"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="MessageText">

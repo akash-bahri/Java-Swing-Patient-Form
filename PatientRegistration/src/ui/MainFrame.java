@@ -7,17 +7,22 @@ package ui;
 import Model.Patient;
 import java.awt.CardLayout;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Akash Bahri
  */
 public class MainFrame extends javax.swing.JFrame {
 
-    
+    //static Patient newpatient;
+    FormPanel formPanel = new FormPanel();
+    FormPanel oldform = new FormPanel();
+    boolean submitted=false;
     public MainFrame() {
         initComponents();
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -101,21 +106,34 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void ViewButtonActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        Patient p = new Patient();
-        ViewPanel viewPanel = new ViewPanel(p);
+        //Patient p = new Patient();
+        if(formPanel.submitted)
+            oldform=formPanel;
+        
+        submitted=oldform.submitted;
+        if(submitted)
+        {
+        ViewPanel viewPanel = new ViewPanel(oldform.getPatient());
         BotPanel.add(viewPanel);
         CardLayout layout = (CardLayout) BotPanel.getLayout();
         layout.next(BotPanel);
+        }
+        else
+         JOptionPane.showMessageDialog(this, "NO DATA ENTERED", "SYSTEM Information", JOptionPane.ERROR_MESSAGE);
+             
     }// GEN-LAST:event_jButton2ActionPerformed
     
 
     private void FormButtonActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        FormPanel formPanel = new FormPanel(BotPanel);
+        oldform=formPanel;
+        formPanel = new FormPanel(BotPanel);
         // SplitPane.setBottomComponent(formPanel);
         BotPanel.add(formPanel);
         CardLayout layout = (CardLayout) BotPanel.getLayout();
         layout.next(BotPanel);
+        
+        
 
     }// GEN-LAST:event_jButton1ActionPerformed
 

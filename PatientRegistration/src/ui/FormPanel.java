@@ -26,15 +26,18 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 public class FormPanel extends javax.swing.JPanel {
 
     private Patient newPatient;
-    /**
-     * Creates new form newpanel
-     */
+    boolean submitted;
     private ImageIcon icon;
     JPanel BotPanel;
+    public FormPanel(){
+        submitted = false;
+        icon = null;
+        newPatient = null;
+        BotPanel = null;
+    }
     public FormPanel(JPanel BotPanel) {
         initComponents();
         this.BotPanel=BotPanel;
-        
     }
 
     /**
@@ -73,8 +76,8 @@ public class FormPanel extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(153, 204, 255));
 
-        FNameLabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        FNameLabel.setText("First Name");
+        FNameLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        FNameLabel.setText("First Name :");
 
         FNameText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -87,7 +90,7 @@ public class FormPanel extends javax.swing.JPanel {
             }
         });
 
-        UploadLabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        UploadLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         UploadLabel.setText("Upload Image");
 
         SubmitButton.setFont(new java.awt.Font("MS UI Gothic", 0, 24)); // NOI18N
@@ -98,11 +101,11 @@ public class FormPanel extends javax.swing.JPanel {
             }
         });
 
-        AgeLabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        AgeLabel.setText("Age");
+        AgeLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        AgeLabel.setText("Age :");
 
-        LNameLabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        LNameLabel.setText("Last Name");
+        LNameLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        LNameLabel.setText("Last Name :");
 
         ImageButton.setBackground(new java.awt.Color(204, 204, 204));
         ImageButton.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -119,20 +122,20 @@ public class FormPanel extends javax.swing.JPanel {
             }
         });
 
-        EmailLabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        EmailLabel.setText("Email");
+        EmailLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        EmailLabel.setText("Email :");
 
-        MessageLabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        MessageLabel.setText("Message");
+        MessageLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        MessageLabel.setText("Message :");
 
         ImageLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        TitleLabel.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 24)); // NOI18N
+        TitleLabel.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 36)); // NOI18N
         TitleLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TitleLabel.setText("Patient Registration Form ");
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel2.setText("Patient Type");
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel2.setText("Patient Type :");
 
         PatientType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "General", "ICU", "Emergency", "Pregnancy", "Surgery", "Staff" }));
         PatientType.setSelectedIndex(-1);
@@ -142,12 +145,13 @@ public class FormPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel3.setText("Gender");
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel3.setText("Gender :");
 
         GenderGroup.add(OtherButton);
-        OtherButton.setText("Other");
-        OtherButton.setActionCommand("Patient is Other");
+        OtherButton.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        OtherButton.setText("OTHER");
+        OtherButton.setActionCommand("OTHER");
         OtherButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 OtherButtonActionPerformed(evt);
@@ -155,8 +159,9 @@ public class FormPanel extends javax.swing.JPanel {
         });
 
         GenderGroup.add(MaleButton);
-        MaleButton.setText("Male");
-        MaleButton.setActionCommand("Patient is Male");
+        MaleButton.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        MaleButton.setText("MALE");
+        MaleButton.setActionCommand("MALE");
         MaleButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MaleButtonActionPerformed(evt);
@@ -164,8 +169,9 @@ public class FormPanel extends javax.swing.JPanel {
         });
 
         GenderGroup.add(FemaleButton);
-        FemaleButton.setText("Female");
-        FemaleButton.setActionCommand("Patient is Female");
+        FemaleButton.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        FemaleButton.setText("FEMALE");
+        FemaleButton.setActionCommand("FEMALE");
 
         MessageText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -177,50 +183,51 @@ public class FormPanel extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(TitleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(274, 274, 274))
             .addGroup(layout.createSequentialGroup()
-                .addGap(112, 112, 112)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(SubmitButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(AgeLabel)
-                            .addComponent(EmailLabel)
-                            .addComponent(FNameLabel)
-                            .addComponent(LNameLabel)
-                            .addComponent(MessageLabel)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3))
-                        .addGap(71, 71, 71)
+                        .addGap(112, 112, 112)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(SubmitButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(MaleButton)
-                                .addGap(77, 77, 77)
-                                .addComponent(FemaleButton)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(OtherButton))
-                            .addComponent(FNameText)
-                            .addComponent(LNameText)
-                            .addComponent(AgeText)
-                            .addComponent(EmailText, javax.swing.GroupLayout.DEFAULT_SIZE, 319, Short.MAX_VALUE)
-                            .addComponent(PatientType, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(MessageText))))
-                .addGap(44, 44, 44)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(ImageLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(UploadLabel)
-                    .addComponent(ImageButton, javax.swing.GroupLayout.DEFAULT_SIZE, 183, Short.MAX_VALUE))
-                .addContainerGap(104, Short.MAX_VALUE))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(AgeLabel)
+                                    .addComponent(EmailLabel)
+                                    .addComponent(FNameLabel)
+                                    .addComponent(LNameLabel)
+                                    .addComponent(MessageLabel)
+                                    .addComponent(jLabel2)
+                                    .addComponent(jLabel3))
+                                .addGap(71, 71, 71)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(MaleButton)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(FemaleButton)
+                                        .addGap(57, 57, 57)
+                                        .addComponent(OtherButton))
+                                    .addComponent(FNameText)
+                                    .addComponent(LNameText)
+                                    .addComponent(AgeText)
+                                    .addComponent(EmailText, javax.swing.GroupLayout.DEFAULT_SIZE, 319, Short.MAX_VALUE)
+                                    .addComponent(PatientType, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(MessageText))))
+                        .addGap(44, 44, 44)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(ImageLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(UploadLabel)
+                            .addComponent(ImageButton, javax.swing.GroupLayout.DEFAULT_SIZE, 183, Short.MAX_VALUE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(225, 225, 225)
+                        .addComponent(TitleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 454, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(63, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addComponent(TitleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(58, 58, 58)
+                .addGap(18, 18, 18)
+                .addComponent(TitleLabel)
+                .addGap(49, 49, 49)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -261,7 +268,7 @@ public class FormPanel extends javax.swing.JPanel {
                             .addComponent(OtherButton))))
                 .addGap(74, 74, 74)
                 .addComponent(SubmitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(83, Short.MAX_VALUE))
+                .addContainerGap(71, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -308,7 +315,8 @@ public class FormPanel extends javax.swing.JPanel {
                 throw new Exception("Patient Gender Not Selected");
             }
 
-            JOptionPane.showMessageDialog(this, "Submitted", "User Information", JOptionPane.INFORMATION_MESSAGE);
+            //JOptionPane.showMessageDialog(this, "Submitted", "User Information", JOptionPane.INFORMATION_MESSAGE);
+            submitted=true;
             ViewPanel newView = new ViewPanel(newPatient);
             
        
@@ -316,6 +324,7 @@ public class FormPanel extends javax.swing.JPanel {
         BotPanel.add(newView);
         CardLayout layout = (CardLayout) BotPanel.getLayout();
         layout.next(BotPanel);
+        
         } catch (Exception e) {
 
             JOptionPane.showMessageDialog(this, e.getMessage(), "User Information", JOptionPane.ERROR_MESSAGE);
@@ -326,6 +335,10 @@ public class FormPanel extends javax.swing.JPanel {
         // System.out.println(FName+Age);
     }// GEN-LAST:event_SubmitButtonActionPerformed
 
+    public Patient getPatient(){
+        return this.newPatient;
+    }
+    
     private void ImageButtonActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_ImageButtonActionPerformed
         
 
@@ -338,7 +351,7 @@ public class FormPanel extends javax.swing.JPanel {
                 if (edited_image != null) {
                     icon = new ImageIcon(edited_image);
                     ImageLabel.setIcon(icon);
-                    JOptionPane.showMessageDialog(null,"Successfully uploaded","Display Image",JOptionPane.INFORMATION_MESSAGE,(Icon) icon);
+                    //JOptionPane.showMessageDialog(null,"Successfully uploaded","Display Image",JOptionPane.INFORMATION_MESSAGE,(Icon) icon);
                     UploadLabel.setText("Image Uploaded");
                 } else {
                     throw new Exception("Unsupported File");
@@ -354,10 +367,6 @@ public class FormPanel extends javax.swing.JPanel {
         
 
     }// GEN-LAST:event_ImageButtonActionPerformed
-
-    public Patient getPatient(){
-        return this.newPatient;
-    }
 
     private void EmailTextActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_EmailTextActionPerformed
         // TODO add your handling code here:
@@ -391,4 +400,6 @@ public class FormPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables
+
+  
 }

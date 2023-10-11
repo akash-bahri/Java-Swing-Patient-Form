@@ -14,7 +14,7 @@ public class Patient {
 
     private String FName="No Data";
     private String LName="No Data";
-    private int Age=-1;
+    private int Age;
     private String Email="No Data";
     private String Message="No Data";
     private String PatientType="No Data";
@@ -109,7 +109,7 @@ public class Patient {
     public void setIcon(ImageIcon icon) {
         if (icon == null)
             this.icon = new ImageIcon("src\\images\\default.png");
-            //throw new NullPointerException("Icon is null");
+            
         else
         this.icon = icon;
     }
