@@ -21,10 +21,18 @@ public class ViewPanel extends javax.swing.JPanel {
    
 
     void PopulateData(Patient[] list) {
-        todo;
-        Patient newpatient = list[1];
-
-        PatientListBox.addItem(newpatient.getFName() + " " + newpatient.getLName());
+        //todo;
+        Patient newpatient;
+        for(int i=0;i<list.length;i++)
+        {
+            if(list[i]==null) break;
+            newpatient = list[i];
+            PatientListBox.addItem(newpatient.getFName() + " " + newpatient.getLName());
+        }
+        
+        int i = PatientListBox.getSelectedIndex();
+        newpatient = list[i];
+        
         GenderData.setText(newpatient.getGender());
         FNameData.setText(newpatient.getFName());
         LNameData.setText(newpatient.getLName());
@@ -50,7 +58,6 @@ public class ViewPanel extends javax.swing.JPanel {
 
     public ViewPanel(   ) {
         initComponents();
-        
         PopulateData(FormPanel.patientlist);
     }
 

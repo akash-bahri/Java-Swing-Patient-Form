@@ -17,7 +17,7 @@ public class MainFrame extends javax.swing.JFrame {
 
     //static Patient newpatient;
     FormPanel formPanel = new FormPanel();
-    FormPanel oldform = new FormPanel();
+    
     boolean submitted=false;
     public MainFrame() {
         initComponents();
@@ -123,7 +123,7 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void FormButtonActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        //oldform=formPanel;
+
         formPanel = new FormPanel(BotPanel);
         // SplitPane.setBottomComponent(formPanel);
         BotPanel.add(formPanel);
