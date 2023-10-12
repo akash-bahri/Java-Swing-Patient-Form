@@ -150,7 +150,7 @@ public class FormPanel extends javax.swing.JPanel {
 
         GenderGroup.add(OtherButton);
         OtherButton.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        OtherButton.setText("OTHER");
+        OtherButton.setText("Other");
         OtherButton.setActionCommand("OTHER");
         OtherButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -160,7 +160,7 @@ public class FormPanel extends javax.swing.JPanel {
 
         GenderGroup.add(MaleButton);
         MaleButton.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        MaleButton.setText("MALE");
+        MaleButton.setText("Male");
         MaleButton.setActionCommand("MALE");
         MaleButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -170,8 +170,13 @@ public class FormPanel extends javax.swing.JPanel {
 
         GenderGroup.add(FemaleButton);
         FemaleButton.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        FemaleButton.setText("FEMALE");
+        FemaleButton.setText("Female");
         FemaleButton.setActionCommand("FEMALE");
+        FemaleButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                FemaleButtonActionPerformed(evt);
+            }
+        });
 
         MessageText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -245,7 +250,7 @@ public class FormPanel extends javax.swing.JPanel {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(EmailLabel)
                             .addComponent(EmailText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(ImageLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(ImageLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -268,7 +273,7 @@ public class FormPanel extends javax.swing.JPanel {
                             .addComponent(OtherButton))))
                 .addGap(74, 74, 74)
                 .addComponent(SubmitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(71, Short.MAX_VALUE))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -283,6 +288,10 @@ public class FormPanel extends javax.swing.JPanel {
     private void OtherButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OtherButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_OtherButtonActionPerformed
+
+    private void FemaleButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FemaleButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_FemaleButtonActionPerformed
 
     private void FNameTextActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_FNameTextActionPerformed
         // TODO add your handling code here:
