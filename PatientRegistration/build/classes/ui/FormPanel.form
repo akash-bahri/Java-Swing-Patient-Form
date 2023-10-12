@@ -103,7 +103,7 @@
                           <Component id="EmailText" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <Component id="ImageLabel" alignment="0" min="-2" pref="190" max="-2" attributes="0"/>
+                  <Component id="ImageLabel" alignment="0" min="-2" pref="229" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -133,7 +133,7 @@
               </Group>
               <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
               <Component id="SubmitButton" min="-2" pref="34" max="-2" attributes="0"/>
-              <EmptySpace pref="71" max="32767" attributes="0"/>
+              <EmptySpace pref="32" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -290,7 +290,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="14" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="OTHER"/>
+        <Property name="text" type="java.lang.String" value="Other"/>
         <Property name="actionCommand" type="java.lang.String" value="OTHER"/>
       </Properties>
       <Events>
@@ -305,7 +305,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="14" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="MALE"/>
+        <Property name="text" type="java.lang.String" value="Male"/>
         <Property name="actionCommand" type="java.lang.String" value="MALE"/>
       </Properties>
       <Events>
@@ -320,9 +320,12 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="14" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="FEMALE"/>
+        <Property name="text" type="java.lang.String" value="Female"/>
         <Property name="actionCommand" type="java.lang.String" value="FEMALE"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="FemaleButtonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="MessageText">
       <Events>
