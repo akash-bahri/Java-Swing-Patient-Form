@@ -107,13 +107,10 @@ public class MainFrame extends javax.swing.JFrame {
     private void ViewButtonActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         //Patient p = new Patient();
-        if(formPanel.submitted)
-            oldform=formPanel;
         
-        submitted=oldform.submitted;
         if(submitted)
         {
-        ViewPanel viewPanel = new ViewPanel(oldform.getPatient());
+        ViewPanel viewPanel = new ViewPanel();
         BotPanel.add(viewPanel);
         CardLayout layout = (CardLayout) BotPanel.getLayout();
         layout.next(BotPanel);
@@ -126,7 +123,7 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void FormButtonActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        oldform=formPanel;
+        //oldform=formPanel;
         formPanel = new FormPanel(BotPanel);
         // SplitPane.setBottomComponent(formPanel);
         BotPanel.add(formPanel);

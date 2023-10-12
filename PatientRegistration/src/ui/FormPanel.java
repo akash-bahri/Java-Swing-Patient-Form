@@ -29,6 +29,7 @@ public class FormPanel extends javax.swing.JPanel {
     boolean submitted;
     private ImageIcon icon;
     JPanel BotPanel;
+    static Patient[] patientlist = new Patient[10];
     public FormPanel(){
         submitted = false;
         icon = null;
@@ -218,14 +219,14 @@ public class FormPanel extends javax.swing.JPanel {
                                     .addComponent(PatientType, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(MessageText))))
                         .addGap(44, 44, 44)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(ImageLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(UploadLabel)
-                            .addComponent(ImageButton, javax.swing.GroupLayout.DEFAULT_SIZE, 183, Short.MAX_VALUE)))
+                            .addComponent(ImageButton, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ImageLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(225, 225, 225)
                         .addComponent(TitleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 454, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(63, Short.MAX_VALUE))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -249,19 +250,15 @@ public class FormPanel extends javax.swing.JPanel {
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(EmailLabel)
-                            .addComponent(EmailText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(ImageLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(UploadLabel)
-                        .addGap(9, 9, 9)
-                        .addComponent(ImageButton))
-                    .addGroup(layout.createSequentialGroup()
+                            .addComponent(EmailText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(83, 83, 83)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(MessageLabel)
-                            .addComponent(MessageText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(28, 28, 28)
+                            .addComponent(MessageText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(ImageLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2)
                             .addComponent(PatientType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -270,7 +267,11 @@ public class FormPanel extends javax.swing.JPanel {
                             .addComponent(jLabel3)
                             .addComponent(MaleButton)
                             .addComponent(FemaleButton)
-                            .addComponent(OtherButton))))
+                            .addComponent(OtherButton)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(UploadLabel)
+                        .addGap(9, 9, 9)
+                        .addComponent(ImageButton)))
                 .addGap(74, 74, 74)
                 .addComponent(SubmitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(32, Short.MAX_VALUE))
@@ -326,13 +327,16 @@ public class FormPanel extends javax.swing.JPanel {
 
             //JOptionPane.showMessageDialog(this, "Submitted", "User Information", JOptionPane.INFORMATION_MESSAGE);
             submitted=true;
-            ViewPanel newView = new ViewPanel(newPatient);
+            newPatient.setPatientId(Patient.count);
+            patientlist[Patient.count] = newPatient;
+            Patient.count++;
+            //ViewPanel newView = new ViewPanel(newPatient);
             
        
         // SplitPane.setBottomComponent(formPanel);
-        BotPanel.add(newView);
-        CardLayout layout = (CardLayout) BotPanel.getLayout();
-        layout.next(BotPanel);
+        //BotPanel.add(newView);
+        //CardLayout layout = (CardLayout) BotPanel.getLayout();
+        //layout.next(BotPanel);
         
         } catch (Exception e) {
 

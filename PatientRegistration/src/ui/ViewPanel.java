@@ -18,8 +18,13 @@ public class ViewPanel extends javax.swing.JPanel {
 
     //private Patient newpatient;
     
+   
 
-    void PopulateData(Patient newpatient) {
+    void PopulateData(Patient[] list) {
+        todo;
+        Patient newpatient = list[1];
+
+        PatientListBox.addItem(newpatient.getFName() + " " + newpatient.getLName());
         GenderData.setText(newpatient.getGender());
         FNameData.setText(newpatient.getFName());
         LNameData.setText(newpatient.getLName());
@@ -43,9 +48,10 @@ public class ViewPanel extends javax.swing.JPanel {
         }
     }
 
-    public ViewPanel( Patient newPatient ) {
+    public ViewPanel(   ) {
         initComponents();
-        PopulateData(newPatient);
+        
+        PopulateData(FormPanel.patientlist);
     }
 
 
@@ -77,6 +83,7 @@ public class ViewPanel extends javax.swing.JPanel {
         LNameData = new javax.swing.JLabel();
         AgeData = new javax.swing.JLabel();
         EmailData = new javax.swing.JLabel();
+        PatientListBox = new javax.swing.JComboBox<>();
 
         setBackground(new java.awt.Color(114, 204, 204));
 
@@ -129,6 +136,8 @@ public class ViewPanel extends javax.swing.JPanel {
         EmailData.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         EmailData.setText("no data");
 
+        PatientListBox.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -136,9 +145,14 @@ public class ViewPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(70, 70, 70)
-                        .addComponent(ImageLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(34, 34, 34)
+                        .addGap(312, 312, 312)
+                        .addComponent(TitleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(52, 52, 52)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(PatientListBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(ImageLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 214, Short.MAX_VALUE))
+                        .addGap(46, 46, 46)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(FNameLabel)
                             .addComponent(LNameLabel)
@@ -155,20 +169,19 @@ public class ViewPanel extends javax.swing.JPanel {
                             .addComponent(EmailData)
                             .addComponent(PatientTypeData)
                             .addComponent(GenderData)
-                            .addComponent(MessageData)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(312, 312, 312)
-                        .addComponent(TitleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(431, Short.MAX_VALUE))
+                            .addComponent(MessageData))))
+                .addContainerGap(418, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(16, 16, 16)
                 .addComponent(TitleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(69, 69, 69)
+                .addGap(62, 62, 62)
+                .addComponent(PatientListBox, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(47, 47, 47)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(ImageLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ImageLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(FNameLabel)
                         .addGap(18, 18, 18)
@@ -197,7 +210,7 @@ public class ViewPanel extends javax.swing.JPanel {
                         .addComponent(GenderData)
                         .addGap(18, 18, 18)
                         .addComponent(MessageData)))
-                .addContainerGap(270, Short.MAX_VALUE))
+                .addContainerGap(193, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -214,6 +227,7 @@ public class ViewPanel extends javax.swing.JPanel {
     private javax.swing.JLabel LNameLabel;
     private javax.swing.JLabel MessageData;
     private javax.swing.JLabel MessageLabel;
+    private javax.swing.JComboBox<String> PatientListBox;
     private javax.swing.JLabel PatientTypeData;
     private javax.swing.JLabel PatientTypeLabel;
     private javax.swing.JLabel TitleLabel;

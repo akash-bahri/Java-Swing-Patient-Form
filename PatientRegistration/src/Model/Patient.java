@@ -12,6 +12,9 @@ import javax.swing.ImageIcon;
  */
 public class Patient {
 
+    public static int count = 0;
+    private int PatientId = 0;
+    
     private String FName="No Data";
     private String LName="No Data";
     private int Age;
@@ -115,6 +118,14 @@ public class Patient {
     }
     public ImageIcon getIcon() {
         return icon;
+    }
+
+    public int getPatientId() {
+        return PatientId;
+    }
+
+    public void setPatientId(int patientId) {
+        PatientId = patientId;
     }
 
 }

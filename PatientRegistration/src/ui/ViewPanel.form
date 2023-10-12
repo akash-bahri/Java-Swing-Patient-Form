@@ -23,10 +23,17 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="312" max="-2" attributes="0"/>
+                      <Component id="TitleLabel" min="-2" pref="356" max="-2" attributes="0"/>
+                  </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
-                      <Component id="ImageLabel" min="-2" pref="160" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="PatientListBox" max="32767" attributes="0"/>
+                          <Component id="ImageLabel" pref="214" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="FNameLabel" min="-2" max="-2" attributes="0"/>
                           <Component id="LNameLabel" min="-2" max="-2" attributes="0"/>
@@ -47,12 +54,8 @@
                           <Component id="MessageData" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="312" max="-2" attributes="0"/>
-                      <Component id="TitleLabel" min="-2" pref="356" max="-2" attributes="0"/>
-                  </Group>
               </Group>
-              <EmptySpace pref="431" max="32767" attributes="0"/>
+              <EmptySpace pref="418" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -61,9 +64,11 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
               <Component id="TitleLabel" min="-2" pref="34" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
+              <Component id="PatientListBox" min="-2" pref="37" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="ImageLabel" min="-2" pref="190" max="-2" attributes="0"/>
+                  <Component id="ImageLabel" min="-2" pref="282" max="-2" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="FNameLabel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -95,7 +100,7 @@
                       <Component id="MessageData" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="270" max="32767" attributes="0"/>
+              <EmptySpace pref="193" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -235,6 +240,19 @@
         </Property>
         <Property name="text" type="java.lang.String" value="no data"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="PatientListBox">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="0"/>
+        </Property>
+        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+          <Color id="Default Cursor"/>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
     </Component>
   </SubComponents>
 </Form>
